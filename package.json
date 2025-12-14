@@ -1,0 +1,33 @@
+{
+  "name": "nesher-bookstore",
+  "version": "1.0.0",
+  "description": "ספריית הנשר - חנות ספרים מקוונת",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "install-all": "pnpm install && cd client && pnpm install && cd ..",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server/server.js"
+  },
+  "keywords": ["bookstore", "react", "nodejs", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "joi": "^17.9.2",
+    "morgan": "^1.10.0",
+    "express-rate-limit": "^6.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  }
+}
